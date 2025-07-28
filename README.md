@@ -1,2 +1,2 @@
 # c_torch
-Building tensor library in c
+Building neural network in c++ from scratch

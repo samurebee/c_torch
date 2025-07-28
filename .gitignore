@@ -1,0 +1,15 @@
+/build/
+
+# Ignore compiled object files and executables
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dll
+
+# CMake-generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
