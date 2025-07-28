@@ -12,4 +12,6 @@ class tensor{
         tensor(float); //scalar
         tensor(const std::vector<float>&); //1D or vector
         tensor(const std::vector<std::vector<float>>&); //2D or matrix
+        const float& item() const; //returns reference of a value of the tensor(that has only 1 element)
+        float& item();
 };

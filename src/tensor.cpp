@@ -3,7 +3,7 @@
 
 tensor::tensor(): _data(), _shape(),_stride() {};
 
-tensor::tensor(float data): _data(data), _shape({}), _stride({}){}
+tensor::tensor(float data): _data({data}), _shape({}), _stride({}){}
 
 tensor::tensor(const std::vector<float>& data): _data(data), _shape({data.size()}), _stride({1}) {}
 
@@ -29,4 +29,20 @@ tensor::tensor(const std::vector<std::vector<float>>& data): _shape({data.size()
 
 }
 
+const float& tensor::item() const{
 
+    if(_data.size()==1)
+        return _data[0];
+    
+    else
+        throw std::runtime_error("can only be called on tensors with single element");   
+}
+
+float& tensor::item(){
+
+    if(_data.size()==1)
+        return _data[0];
+    
+    else
+        throw std::runtime_error("can only be called on tensors with single element");
+}
